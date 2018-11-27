@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="hover.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+  <div class="title fade-in">PORTFOLIO</div>
+  <div class="header-container fade-in fade-in-delayed">
+  	<div class="imgdiv">
+  	 <img src="img/profile.jpg">	
+  	</div>
+  	<div class="profile-container">
+  		<div class="list-member"><p><span class="bold">Name</span> Ruangrit Kaewkrom</p></div>
+        <div class="list-member"><p><span class="bold">Age</span> 18</p></div>
+        <div class="list-member"><p><span class="bold">School</span> Assumption College Sriracha</p></div>
+        <div class="list-member"><p><span class="bold">Nationality</span> Thai</p></div>
+  	</div>
+  </div>
+   <div class="graph-container fade-in fade-in-delayed2">
+   	<h1>Computer Related Skills</h1>
+   <div class="graph container"></div>
+    <p>HTML&CSS</p>
+<div class="container">
+  <div class="skills html">Proficient</div>
+</div>
+
+<p>Java</p>
+<div class="container">
+  <div class="skills java">Beginner</div>
+</div>
+<p>Phyton</p>
+<div class="container">
+  <div class="skills python">Beginner</div>
+</div>
+<p>JavaScript</p>
+<div class="container">
+  <div class="skills js">Novice</div>
+</div>
+
+<p>PHP</p>
+<div class="container">
+  <div class="skills php">Novice</div>
+</div>
+</div>
+<div class="infotext fade-in fade-in-delayed3">
+<p>Able to utilize or have experince with</p>
+<div class="infotext-container">
+	<div class="coloredbutton purple hvr-float-shadow">Bootstrap</div>・<div class="coloredbutton blue hvr-float-shadow">Jquery</div>・
+	<div class="coloredbutton lightblue hvr-float-shadow">React</div>・<div class="coloredbutton green hvr-float-shadow">NodeJS</div>・<div class="coloredbutton orange hvr-float-shadow">Linux</div>
+</div>
+</div>
+
+ <div class="worklist fade-in fade-in-delayed4">
+    <h1>My Project</h1>
+ 	<div class="worklist-container">
+ 		<div class="worklist-member hvr-underline-from-left" id="CPS">
+ 			<p>Computer Project SaleTrack ⭳</p>
+ 		</div>	
+ 		<div class="worklist-info" id="saletrackinfo">
+ 			<div class="saletrack-title">SALETRACK</div>
+ 			<div class="image-container">
+ 				<img src="img/saletrack-1.jpg"><img src="img/saletrack-2.jpg">
+ 			</div>
+ 			<p>โครงงานคอมพิวเตอร์โรงเรียนอัสสัมชัญศรีราชา ของผม SaleTrack
+เป็น Web-Application ที่ทำหน้าที่เป็นโปรเเกรมบันทึกการขายสินค้าต่างๆ
+เเละสรุแข้อมูลออกมาให้เห็น เพื่อให้ง่ายต่อการติดตามยอดขาย กำไร
+ของสินค้าหลายๆชิ้น ออกเเบบมาเพื่อ ผู้ที่ทำธุรกิจขายของขนาดย่อม
+โดย Web-Application มีภาษา Back-End เป็น PHP 
+โดยใช้ Apache Webserver โดยมี mySQL เป็น Database
+มีความพิเศษคือจัดการ Database ต่างๆด้วย PHP การเก็บข้อมูลเเยกระหว่างสินค้า ต่างๆ การดึงข้อมูลละวันที่ออกมาเเสดงผล</p>
+ 			<p>This handy web-app is made for small enterprenuer who want an easy way to keep track of the products they're selling. Me,the creator of this website,my self also once was a petty enterprenuer selling cheap products in small quantities find it pretty hard to keep track of everything I sell. I hope this site will be someone's life a littlebit easier!</p>
+ 			<a href=""><button class="button">GitHub Repository</button></a>
+ 		</div>
+ 		<div class="worklist-member hvr-underline-from-left" id="mlq">
+ 			<p>Responsive Web blog (Midline-Question) ⭳</p>
+ 		</div>
+ 		 		<div class="worklist-info" id="mlqinfo">
+ 			<div class="midline-title">Midline-Question</div>
+ 			<div class="image-container" id="muimg">
+ 				<img src="img/mu1.jpg"><img src="img/mu2.jpg"><img src="img/mu3.jpg">
+ 			</div>
+ 			<p>เป็นเว็บบล็อคเเรกที่ผมเขียนขึ้นมา เป็นเว็บที่ออกมาเเบบ Responsive โปรเจ็คนี้ผมได้ใส่ระบบสมัคร เเละล็อค อินเข้าไป เขียนด้วย PHP เป็นภาษา Back-End</p>
+ 			<a href=""><button class="button">GitHub Repository</button></a>
+ 		</div>
+ 	</div>
+</div>
+
+<script type="text/javascript">
+          $( "#CPS" ).click(function() {
+          $("#saletrackinfo").slideToggle(500);
+  });
+          $( "#mlq" ).click(function() {
+          $("#mlqinfo").slideToggle(500);
+  });
+</script>
+</body>
+</html>

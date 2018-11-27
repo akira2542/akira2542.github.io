@@ -26,6 +26,8 @@ background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, F
 }
 .header-container img{
  height: 180px;
+ border-radius: 50%;
+
 }
 .list-member {
 	border-bottom:1px solid #cecece;

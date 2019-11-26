@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEIRD TANK</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_history.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="animate.css">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">    
+    </script>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- แถบด้านบน  -->
+    <nav>
+        <div id="logo-container" class="animated fadeInLeft">
+        <a class="content-link" href="home.html"></a>  
+        <img src="images/shield.png">
+        <h1>AW</h1></div>
+        <h4 id="nav-indicator">Back to HomePage</h4> 
+         
+    </nav>
+
+    <!--  เนื้อหา content ด้านบน  -->
+
+    <div class="banner" id="slideDown" style="background-image: url(images/t14.jpg);">
+        <div class="home-container" style="margin-top: 50px">
+            <div class="home-container-row-1 center-content animated fadeInDown delay-1s ">
+
+                <div><img src="images/weird.png" alt="ammo"></div>
+
+            </div>
+            <div class="home-container-row-2 center-content animated fadeInUp delay-1-25s">
+                <h1 style="font-size: 4em;">WEIRDEST TANK</h1>
+            </div>
+            <div class="home-container-row-2 center-content animated fadeInUp delay-1-5s">
+                <h2>
+                    not all tank looks conventional. some of the tanks have crazy and outlandish design.
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <!--  เนื้อหา content ด้านล่าง -->
+    <div class="content_bottom" style="flex-wrap: wrap;">  
+        <div class="future-click animated fadeInUp delay-1-25s" id="prev"><img src="images/prev.png"></div>
+         <div class="future-container animated fadeInUp delay-075s">
+            <div class="future-img-container" id="img1" style="background-image: url(images/tzar.jpg); background-position: 50% 70%">
+            </div>
+            <div class="future-img-container" id="img2" style="background-image: url(images/279.jpg);">
+            </div>
+            <div>
+            <div class="future-details-container" id="det1">
+            <h1>Tsar Tank</h1>
+            <p>It differed from modern tanks in that it did not use caterpillar tracks—rather, it used a tricycle design, meaning it does not suit the modern definition of a tank. The two front spoked wheels were nearly 9 metres (30 ft) in diameter; the rear-mounted third wheel was only 1.5 metres (5 ft) high. The upper cannon turret reached a height of nearly 8 metres (26 ft). The hull was 12 metres (39 ft) wide with two more cannon in sponsons. Additional weapons were also planned under the belly. Each wheel was powered by a 250 hp (190 kW) Sunbeam engine.[1]</p>
+            </div>
+            <div class="future-details-container" id="det2">
+            <h1>Nuclear-Proof Tank</h1>
+            <p>This is the ominously-named Object 279, one of the last Russian heavy tank prototypes before Kruschev banned all tanks heavier than 37 tons. Built in 1959 at 60 metric tons, it was designed to withstand a nuclear shockwave. It resembles some kind of doom oyster.</p>
+            </div>
+            </div>
+        </div>
+        <div class="future-click animated fadeInUp delay-1-25s" id="next"><img src="images/next.png"></div>
+    </div>
+
+
+
+</body>
+<script type="text/javascript">
+        
+        $(document).ready(function(){
+                $("#slideDown").slideDown(1500);
+        }); 
+
+        // console.log($('.future-img-container').length);
+        
+        // $('#next').click(function() {
+        // console.log("clicked");
+        // currentPicture++;
+        // if (currentPicture > $('.future-img-container').length) {
+        // currentPicture = 1;
+        //  }
+        // $('.future-img-container').css('display', 'none');
+        // $(`#img${currentPicture}`).css('display', 'inherit');
+        // });
+        var currentPicture = 1;
+        $('#next').click(function() {
+        console.log("clicked");
+        currentPicture++;
+        if (currentPicture > $('.future-img-container').length) {
+        currentPicture = 1;
+         }
+         $('.future-img-container').fadeIn(250);
+         $('.future-details-container').fadeIn(250);
+        $('.future-img-container').css('display', 'none');
+        $('.future-details-container').css('display', 'none');
+        $(`#img${currentPicture}`).css('display', 'block');
+        $(`#det${currentPicture}`).css('display', 'block');
+        });
+
+        $('#prev').click(function() {
+        console.log("clicked");
+        currentPicture--;
+        if (currentPicture < 1) {
+        currentPicture = $('.future-img-container').length;
+         }
+         $('.future-img-container').fadeIn(250);
+         $('.future-details-container').fadeIn(250);
+        $('.future-img-container').css('display', 'none');
+        $('.future-details-container').css('display', 'none');
+        $(`#img${currentPicture}`).css('display', 'block');
+        $(`#det${currentPicture}`).css('display', 'block');
+        });
+
+        $("#logo-container").hover(function(){
+            console.log("moused over")
+            $("#nav-indicator").fadeIn(500);
+            // $('#nav-indicator').css('display', 'block');
+              }, function(){
+         $('#nav-indicator').fadeOut(500);
+  }); 
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,16 +6,10 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Anton', san-serif;
+	background: black;
 }
 .font {
-/*
-	background-image: url(images/homewallpaper.jpg);
-	background-position: center center;
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
 
-*/
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -33,7 +27,9 @@ body {
 	background-position: center;
 	z-index: 0;
 }
-
+p {
+	font-family: 'Tomorrow', sans-serif;
+}
 .center-content {
 	display: flex;
 	justify-content: center;	
@@ -50,6 +46,9 @@ body {
 	letter-spacing: 0.1em;
 	text-shadow: 2px 2px 4px #000000;
 
+}
+.index-container:hover {
+	cursor: default;
 }
 
 
@@ -82,11 +81,32 @@ body {
  	font-family: 'Anton', san-serif;
  	margin-top: 1em;
  	cursor: pointer;
- 	transition: background 0.2s ease-in-out;
+ 	transition: all 0.2s ease-in-out;
  	transition: filter 0.2s ease-in-out;
 }
 
 #enter-btn:hover {
+	background-color: black;
+	transition: background 0.2s ease-in-out;
+	color: white;
+	border: 1px solid white;
+}
+.show_vid {
+  	color: white;
+  	background: none;
+  	border: 1px solid white;
+ 	padding: 15px 32px;
+ 	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 1em;
+ 	font-family: 'Anton', san-serif;
+ 	margin-top: 1em;
+ 	cursor: pointer;
+ 	transition: background 0.2s ease-in-out;
+}
+
+.show_vid:hover {
 	background-color: black;
 	color: white;
 }
@@ -125,14 +145,27 @@ body {
 
 nav {
 	width: 100%;
-	background-color: #1B1B1B;
+	background-color: black;
 	height: 50px;
+	position: fixed;
+	top: 0;
+	z-index: 3;
+	display: flex;
 }
+
+#nav-indicator {
+	color: white;
+	letter-spacing: 0.1em;
+	font-weight: lighter;
+	margin:12px 0 0 10px;
+	display: none;
+}
+
 #logo-container {
 	display: flex;
 	justify-content: flex-start;
 	height: 100%;
-	background-color: #303030;
+	background-color: #1a1a1a;
 	width: 75px;
 	font-size: 18px;
 	color: white;
@@ -150,25 +183,50 @@ nav {
 }
 
 .banner {
+	margin-top: 50px;
 	height: 400px;
 	width: 100%;
-	background-image: url(images/bannerwallpaper.jpg);
-	background-repeat: no-repeat
+	background-image: url(images/panzer.jpg);
+	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: 0% 40%;
+	background-position: 0% 30%;
 	z-index: 0;
+	/*animation: animatedBackground 10s;*/
+	animation: 20s linear .1s animatedBackground;
+/*    animation-iteration-count: infinite;*/
+    /*animation-timing-function: linear;*/
+    animation-fill-mode: forwards;  
+	-webkit-animation-timing-function: linear;
 }
+@-webkit-keyframes animatedBackground {
+  from {
+    background-position: 0% 30%; }
+
+  to {
+    background-position: 0% 60%; }
+   
+}
+@keyframes animatedBackground {
+  from {
+    background-position: 0% 30%; }
+
+  to {
+    background-position: 0% 60%; }
+ 
+}
+/*content container*/
+
 .home-background {
 	background-image: url(images/genbg.jpg);
-	height: 1000px;
+	background-size: cover;
 	width: 100%;
+	min-height: 1000px
 }
 
 /*content-cards*/
 
 .content-cards-container {
 	width: 100%;
-	position: absolute;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -176,29 +234,39 @@ nav {
 .content-cards-row-1 {
 	display: flex;
 	justify-content: space-around;
-	margin-top: 50px;
 	width: 60%;
+	margin-top: 50px;
 }
 .content-cards-row-2 {
 	display: flex;
 	justify-content: space-around;
 	margin-top: 50px;
 	width: 60%;
+	margin-top: 500px;
+	position: absolute;
 }
 .content-card {
-	width: 220px;
+	min-width: 220px;
 	height: 400px;
 	background-position: center;
 	background-size: cover;
 	text-align: center;
 	color: white;
-	transition: box-shadow 0.3s ease-in-out;
+	transition: all 0.25s ease-in-out;
+/*	transition: box-shadow 0.5s ease-in-out;
+	-webkit-transition: filter 0.5s ease-in-out;
+	-webkit-transition: box-shadow 0.5s ease-in-out;*/
+/*	-webkit-transition: margin 0.2s ease-in-out;
+    -moz-transition: margin 0.2s ease-in-out;
+    -o-transition: margin 0.2s ease-in-out;*/
 }
 .content-card:hover {
-	box-shadow: 0 0 10px #ffffff;
+	
+	box-shadow: 0 0 20px black;
 	cursor: pointer;
 	filter: brightness(130%);
-  		-webkit-filter: brightness(130%);
+	-webkit-filter: brightness(130%);
+  	margin-top: 5px;
 }
 .content-card h1 {
 	font-size: 4.5em;
@@ -214,4 +282,395 @@ nav {
 	letter-spacing: 1px;
 	text-shadow: 1px 1px 2px #000000;
 }
+.content-link  {
+	 position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        text-decoration: none; /* No underlines on the link */
+        z-index: 10; /* Places the link above everything else in the div */
+        background-color: #FFF; /* Fix to make div clickable in IE */
+        opacity: 0; /* Fix to make div clickable in IE */
+        filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+/*catalog card*/
+.catalog-card {
+	width: 300px;
+	height: 210px;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	color: white;
+	transition: all 0.5s ease-in-out;
+	display: flex;
+	align-items: flex-end;
 
+}
+.catalog-card:hover .catalog-description h1{
+	color: white;
+	transition: all 0.5s ease-in-out;
+}
+.catalog-card:hover .catalog-description {
+	background-color: black;
+	border: 1px solid white;
+	transition: all 0.5s ease-in-out;
+}
+.catalog-card:hover #ger {
+	border: 1px solid white;
+}
+#ger {
+	border: 1px solid rgba(255,255,255,0);
+}
+
+.catalog-description {
+	border: 1px solid rgba(255,255,255,0);
+	background-color: rgba(255,255,255,.5);
+	color: white;
+	height: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.catalog-description h1 {
+	margin-left: 10px;
+	color: black;
+}
+.catalog-description img {
+	height: 60%;
+	margin: 10px 10px 0 0;
+}
+.catalog-caption {
+	color: white;
+	margin: 40px 0 0 0;
+}
+.catalog-caption-container {
+	width: 60%;
+}
+
+/*ammo card*/
+.ammo-cards-container {
+	width: 60%;
+}
+.ammo_card {
+	width: 100%;
+	background-color:#1A1A1A;
+
+	display: flex;
+	color: white;
+	justify-content: flex-start;
+	margin-top: 50px;
+}
+.ammo-img {
+	min-width: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.ammo_content {
+	margin: 20px 20px 20px 20px;
+}
+.displaynone {
+	display: none;
+}
+.ammo-video-container {
+	width: 100%;
+	margin: 50px 0 0px 0;
+}
+
+/*tank battles*/
+.video_container {
+	width: 60%;
+	margin: 50px 0 0px 0;
+}
+.overlay {
+	background-color:#1A1A1A;
+	color: white;
+}
+.overlay h1 {
+	padding: 10px 10px 10px 20px;
+}
+#battle_video {
+	width: 100%;
+}
+
+/*top 5*/
+
+.tank-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	flex-wrap: wrap;
+}
+.tank-card {
+	height: 450px; 	
+	width: 66%;
+	display: flex;
+	align-items: flex-end;
+	background-size: cover;
+	background-position: 50% 50%;
+	margin-bottom: 50px;
+	-webkit-transition: filter 250ms ease-in-out;
+    -ms-transition: filter 250ms ease-in-out;
+    transition: filter 250ms ease-in-out;
+}
+.tank-card:hover {
+	filter: brightness(120%);
+}
+.tank-card:hover .tank-name{
+	padding-left: 10px;
+	-webkit-transition: padding-left 250ms ease-in-out;
+    -ms-transition: padding-left 250ms ease-in-out;
+    transition: padding-left 250ms ease-in-out;
+}
+.tank-details {
+	display: flex;
+	justify-content: space-between;
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	color: white;
+	height: 50px; 
+}
+.tank-details img {
+	height: 80%;
+	margin: 5px 10px 0 0;
+}
+.tank-details h4 {
+	font-size: 2em;
+	margin-left: 10px;
+}
+
+/*future tanks*/
+.future-container {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 50px;
+}
+.future-img-container:first-of-type {
+	display: block;
+}
+.future-img-container {
+	display: none;
+	width: 100%;
+	height: 400px;
+	background-position: 50% 60%;
+	background-size: cover;
+}
+.future-details-container:first-of-type {
+	display: block;
+}
+.future-details-container {
+	margin-top: 25px;
+	color: white;
+	display: none;
+	width: 100%;
+	background: #1A1A1A;
+	padding: 25px 20px 25px 20px;
+}
+.future-click {
+	color: white;
+	width: 5%;
+	height: 400px;
+	background-color: #1A1A1A;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 50px 20px 0 20px;
+
+}
+.future-click:hover {
+	border: 1px solid white;
+	background-color: black;
+	-webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+
+}
+.future-click:active {
+	background-color: white;
+}
+
+div.future-click img {
+	width: 30%;
+} 
+div.future-click:hover img {
+	width: 35%;
+	-webkit-transition: width 250ms linear;
+    -ms-transition: width 250ms linear;
+    transition: width 250ms linear;
+}
+.future-click:hover {
+	cursor: pointer;
+}
+
+.profile-details-container{
+	margin-top: 25px;
+	color: white;
+	width: 66%;
+	background: #1A1A1A;
+	padding: 25px 20px 25px 20px;
+
+}
+
+/*member list*/
+
+.member-link {
+	color: white;
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	font-weight: lighter;
+    animation-name: glowing;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    display: none;
+   	-webkit-transition: bottom 0.5s linear;
+    -ms-transition: bottom 0.5s linear;
+    transition: bottom 0.5s linear;
+
+}
+.member-link:hover {
+	bottom: 60px;
+	-webkit-transition: bottom 0.5s linear;
+    -ms-transition: bottom 0.5s linear;
+    transition: bottom 0.5s linear;
+
+}
+@keyframes glowing {
+  0% { text-shadow: 0 0 -10px white; }
+  40% { text-shadow: 0 0 20px white; }
+  60% { text-shadow: 0 0 20px white; }
+  100% { text-shadow: 0 0 -10px white; }
+}
+.member-card {
+	width: 300px;
+	height: 490px;
+	background-color: black;
+	border: 1px solid white;
+	box-shadow: 0px 5px 10px;
+}
+.member-card img {
+	width: 100%;
+	filter: grayscale(50%);
+}
+.member-card:hover img {
+	filter: grayscale(0%);
+	-webkit-transition: filter 0.5s linear;
+ 	-ms-transition: filter 0.5s linear;
+	transition: filter 0.5s linear;
+}
+div.member-card h2 {
+	text-align: center;
+	font-family: 'Anton', sans-serif;
+	font-weight: lighter;
+	color: white;
+	letter-spacing: 1px;
+	margin-top: 5px;
+}
+.content-member-row {
+	width: 60%;
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+	top: 150px;
+}
+.source {
+/*	border: 1px solid white;*/
+	padding: 10px 20px 10px 20px;
+	margin-top: 750px;
+	width: 50%;
+	color: white;
+	margin-bottom: 100px;
+/*	background-color: rgba(0,0,0,.5);*/
+
+}
+.source-container {
+	display: flex;
+	justify-content: center;
+}
+.source ul {
+	list-style-type: none;
+	margin-left: 80px;
+	margin-bottom: 10px;
+	font-size: 1.5em;
+}
+.source a {
+	text-decoration: none;
+	color: lightgrey;
+}
+.source span {
+	opacity: 0;
+	float: right;
+	margin-right: 10px;
+
+}
+.source li {
+	border: 1px solid rgba(0,0,0,0);
+	padding-left: 20px;
+	color: #cecece;
+}
+.source li:hover {
+	background-color: rgba(0,0,0,1);
+	-webkit-transition: background-color 0.5s linear,border 0.5s linear,color 0.5s linear;
+    -ms-transition: background-color 0.5s linear,border 0.5s linear,color 0.5s linear;
+    transition: background-color 0.5s linear,border 0.5s linear,color 0.5s linear;
+    border: 1px solid rgba(255,255,255,1);
+    color: white;
+}
+.source li:hover a {
+	color: white;
+}
+.source li:hover span {
+	opacity: 1;
+	-webkit-transition: opacity 0.5s linear,margin-right 0.5s linear;
+    -ms-transition: opacity 0.5s linear,margin-right 0.5s linear;
+    transition: opacity 0.5s linear,margin-right 0.5s linear;
+    margin-right: 20px;
+}
+.source h4,h3 {
+	font-weight: lighter;
+}
+.source h3 {
+	font-size: 3em;
+}
+.source h4 {
+	font-size: 2.5em;
+	margin-bottom: 10px
+}
+.source h4 {
+	margin-left: 50px;
+}
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.floating-reverse {  
+    animation-name: floatingreverse;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#member-2 {
+	margin-top: 15px;
+}
+.name {
+	background-color: white;
+	color: black !important;
+	margin-top: -5px !important;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+@keyframes floatingreverse {
+    from { margin-top: 15px; }
+    65%  { margin-top: 0px; }
+    to   { margin-top: 15px; }    
+}

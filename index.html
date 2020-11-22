@@ -1,105 +1,182 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="stylesheet" type="text/css" href="hover.css">
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="title fade-in">PORTFOLIO</div>
-  <div class="header-container fade-in fade-in-delayed">
-  	<div class="imgdiv">
-  	 <img src="img/profile.jpg">	
-  	</div>
-  	<div class="profile-container">
-  		<div class="list-member"><p><span class="bold">Name</span> Ruangrit Kaewkrom</p></div>
-        <div class="list-member"><p><span class="bold">Age</span> 18</p></div>
-        <div class="list-member"><p><span class="bold">School</span> Assumption College Sriracha</p></div>
-        <div class="list-member"><p><span class="bold">Nationality</span> Thai</p></div>
-  	</div>
-  </div>
-   <div class="graph-container fade-in fade-in-delayed2">
-   	<h1>Computer Related Skills</h1>
-   <div class="graph container"></div>
-    <p>HTML&CSS</p>
-<div class="container">
-  <div class="skills html">Proficient</div>
-</div>
+	<div class="title fade-in">Online Portfolio</div>
+	<div class="header-container fade-in fade-in-delayed">
+		<div class="image-container">
+			<img src="img/profile.jpg">
+		</div>
+		<div class="profile-container">
+			<div class="list-member">
+				<p><span class="bold">Name</span> Ruangrit Kaewkrom</p>
+			</div>
+			<div class="list-member">
+				<p><span class="bold">Age</span> <em>(17 November 1999)</em></p>
+			</div>
+			<div class="list-member">
+				<p><span class="bold">College</span> King Mongkut's University of Technology Thonburi</p>
+			</div>
+			<div class="list-member">
+				<p><span class="bold">Nationality</span> Thai</p>
+			</div>
+			
+			<div class="list-member">
+			<a target="_blank" href="https://github.com/akira2542"><button class="button hvr-sweep-to-left">GitHub</button></a>
+			</div>
 
-<p>Java</p>
-<div class="container">
-  <div class="skills java">Beginner</div>
-</div>
-<p>Phyton</p>
-<div class="container">
-  <div class="skills python">Beginner</div>
-</div>
-<p>JavaScript</p>
-<div class="container">
-  <div class="skills js">Novice</div>
-</div>
+		</div>
+	</div>
+	<div class="graph-container fade-in fade-in-delayed2">
+		<h1>Computer Related Skills</h1>
+		<div class="graph container"></div>
+		<p>HTML&CSS</p>
+		<div class="container">
+			<div class="skills html">Expert</div>
+		</div>
 
-<p>PHP</p>
-<div class="container">
-  <div class="skills php">Novice</div>
-</div>
-</div>
-<div class="infotext fade-in fade-in-delayed3">
-<p>Able to utilize or have experince with</p>
-<div class="infotext-container">
-	<div class="coloredbutton purple hvr-float-shadow">Bootstrap</div>・<div class="coloredbutton blue hvr-float-shadow">Jquery</div>・
-	<div class="coloredbutton lightblue hvr-float-shadow">React</div>・<div class="coloredbutton green hvr-float-shadow">NodeJS</div>・<div class="coloredbutton orange hvr-float-shadow">Linux</div>
-</div>
-</div>
+		<p>Java</p>
+		<div class="container">
+			<div class="skills java">Proficient</div>
+		</div>
+		<p>Phyton</p>
+		<div class="container">
+			<div class="skills python">Beginner</div>
+		</div>
+		<p>JavaScript</p>
+		<div class="container">
+			<div class="skills js">Proficient</div>
+		</div>
 
- <div class="worklist fade-in fade-in-delayed4">
-    <h1>My Project</h1>
- 	<div class="worklist-container">
- 		<div class="worklist-member hvr-underline-from-left" id="CPS">
- 			<p>Computer Project SaleTrack ⭳</p>
- 		</div>	
- 		<div class="worklist-info" id="saletrackinfo">
- 			<div class="saletrack-title">SALETRACK</div>
- 			<div class="image-container">
- 				<img src="img/saletrack-1.jpg"><img src="img/saletrack-2.jpg">
- 			</div>
- 			<p>โครงงานคอมพิวเตอร์โรงเรียนอัสสัมชัญศรีราชา ของผม SaleTrack
-เป็น Web-Application ที่ทำหน้าที่เป็นโปรเเกรมบันทึกการขายสินค้าต่างๆ
-เเละสรุแข้อมูลออกมาให้เห็น เพื่อให้ง่ายต่อการติดตามยอดขาย กำไร
-ของสินค้าหลายๆชิ้น ออกเเบบมาเพื่อ ผู้ที่ทำธุรกิจขายของขนาดย่อม
-โดย Web-Application มีภาษา Back-End เป็น PHP 
-โดยใช้ Apache Webserver โดยมี mySQL เป็น Database
-มีความพิเศษคือจัดการ Database ต่างๆด้วย PHP การเก็บข้อมูลเเยกระหว่างสินค้า ต่างๆ การดึงข้อมูลละวันที่ออกมาเเสดงผล</p>
- 			<p>This handy web-app is made for small enterprenuer who want an easy way to keep track of the products they're selling. Me,the creator of this website,my self also once was a petty enterprenuer selling cheap products in small quantities find it pretty hard to keep track of everything I sell. I hope this site will be someone's life a littlebit easier!</p>
- 			<a href="http://myaws2018.bitnamiapp.com"><button class="button2">Visit Website</button></a>
-      <a href="https://github.com/akira2542/SaleTrack"><button class="button">GitHub Repository</button></a>
-      
- 		</div>
- 		<div class="worklist-member hvr-underline-from-left" id="mlq">
- 			<p>Responsive Web blog (Midline-Question) ⭳</p>
- 		</div>
- 		 		<div class="worklist-info" id="mlqinfo">
- 			<div class="midline-title">Midline-Question</div>
- 			<div class="image-container" id="muimg">
- 				<img src="img/mu1.JPG"><img src="img/mu2.JPG"><img src="img/mu3.JPG">
- 			</div>
- 			<p>เป็นเว็บบล็อคเเรกที่ผมเขียนขึ้นมา เป็นเว็บที่ออกมาเเบบ Responsive โปรเจ็คนี้ผมได้ใส่ระบบสมัคร เเละล็อค อินเข้าไป เขียนด้วย PHP เป็นภาษา Back-End</p>
- 			<a href="http://myaws2018.bitnamiapp.com/mq"><button class="button2">Visit Website</button></a>
-      <a href="https://github.com/akira2542/Midline-Question"><button class="button">GitHub Repository</button></a>
-      
- 		</div>
- 	</div>
-</div>
+		<p>PHP</p>
+		<div class="container">
+			<div class="skills php">Novice</div>
+		</div>
+	</div>
+	<div class="infotext fade-in fade-in-delayed3">
+		<p>Able to utilize or have experince with</p>
+		<div class="infotext-container">
+			<div class="coloredbutton purple">Bootstrap</div>・<div
+				class="coloredbutton blue">Jquery</div>・
+			<div class="coloredbutton lightblue">ReactJs</div>・<div
+				class="coloredbutton green">Laravel</div>・<div
+				class="coloredbutton orange">Linux</div>・<div
+				class="coloredbutton green">NextJs</div>
+		</div>
+	</div>
 
-<script type="text/javascript">
-          $( "#CPS" ).click(function() {
-          $("#saletrackinfo").slideToggle(500);
-  });
-          $( "#mlq" ).click(function() {
-          $("#mlqinfo").slideToggle(500);
-  });
-</script>
+	<div class="worklist fade-in fade-in-delayed4">
+		<h1>My Project</h1>
+		<div class="worklist-container">
+			<div class="worklist-member hvr-underline-from-left" id="CPS">
+				<p>Computer Project SaleTrack ⭳</p>
+			</div>
+			<div class="worklist-info" id="saletrackinfo">
+				<div class="saletrack-title">SALETRACK</div>
+				<div class="image-container">
+					<img src="img/saletrack-1.jpg"><img src="img/saletrack-2.jpg">
+				</div>
+				<p>โครงงานคอมพิวเตอร์โรงเรียนอัสสัมชัญศรีราชา ของผม SaleTrack
+					เป็น Web-Application ที่ทำหน้าที่เป็นโปรเเกรมบันทึกการขายสินค้าต่างๆ
+					เเละสรุแข้อมูลออกมาให้เห็น เพื่อให้ง่ายต่อการติดตามยอดขาย กำไร
+					ของสินค้าหลายๆชิ้น ออกเเบบมาเพื่อ ผู้ที่ทำธุรกิจขายของขนาดย่อม
+					โดย Web-Application มีภาษา Back-End เป็น PHP
+					โดยใช้ Apache Webserver โดยมี mySQL เป็น Database
+					มีความพิเศษคือจัดการ Database ต่างๆด้วย PHP การเก็บข้อมูลเเยกระหว่างสินค้า ต่างๆ
+					การดึงข้อมูลละวันที่ออกมาเเสดงผล</p>
+				<p>This handy web-app is made for small enterprenuer who want an easy way to keep track of the products
+					they're selling. Me,the creator of this website,my self also once was a petty enterprenuer selling
+					cheap products in small quantities find it pretty hard to keep track of everything I sell. I hope
+					this site will be someone's life a littlebit easier!</p>
+				<a target="_blank" href="http://myaws2018.bitnamiapp.com"><button class="button2">Visit Website</button></a>
+				<a target="_blank" href="https://github.com/akira2542/SaleTrack"><button class="button">GitHub Repository</button></a>
+
+			</div>
+			<div class="worklist-member hvr-underline-from-left" id="mlq">
+				<p>Web blog (Midline-Question) ⭳</p>
+			</div>
+			<div class="worklist-info" id="mlqinfo">
+				<div class="midline-title">Midline-Question</div>
+				<div class="image-container" id="muimg">
+					<img src="img/mu1.JPG"><img src="img/mu2.JPG"><img src="img/mu3.JPG">
+				</div>
+				<p>เป็นเว็บบล็อคเเรกที่ผมเขียนขึ้นมา เป็นเว็บที่ออกมาเเบบ Responsive โปรเจ็คนี้ผมได้ใส่ระบบสมัคร
+					เเละล็อค อินเข้าไป เขียนด้วย PHP เป็นภาษา Back-End</p>
+				<a target="_blank" href="http://myaws2018.bitnamiapp.com/mq"><button class="button2">Visit Website</button></a>
+				<a target="_blank" href="https://github.com/akira2542/Midline-Question"><button class="button">GitHub
+						Repository</button></a>
+
+			</div>
+			<div class="worklist-member hvr-underline-from-left" id="rp">
+				<p>Hello World 2019 Web Design : RedPanda ⭳</p>
+			</div>
+			<div class="worklist-info" id="rpinfo">
+				<div class="midline-title">RedPanda</div>
+				<div class="image-container" id="muimg">
+					<img src="img/rp1.JPG"><img src="img/rp2.JPG">
+				</div>
+				<p>เป็นการออกแบบเวบไซต์เพื่อเป็นโปรเเจ็คส่งในค่าย Hello World 2019 ในช่วงที่ผมยังน้องเข้าร่วมค่าย ได้รับการเรียนรู้ใน วิธีการออกแบบเว็บไซต์ ทั้ง UX เเละ UI ที่ดี</p>
+				<a target="_blank" href="https://www.figma.com/file/J63xgL8w11506dFhB7BP00/Red-Panda?node-id=0%3A1"><button class="button">Figma
+						</button></a>
+
+			</div>
+			<div class="worklist-member hvr-underline-from-left" id="wip">
+				<p>WIP camp #12 PR Website ⭳</p>
+			</div>
+			<div class="worklist-info" id="wipinfo">
+				<div class="midline-title">WIP camp #12</div>
+				<div class="image-container" id="muimg">
+					<img src="img/wip1.JPG"><img src="img/wip2.JPG"><img src="img/wip3.JPG">
+				</div>
+				<p>เป็นเว็บเเรกที่ได้ทำงานเป็นทีมเเบบจริง ๆ จัง ๆ โดยที่เว็ปไซต์นี้มี stack เป็น NextJs ผมทำหน้าที่จัดการเรื่อง Navbat / Hamburger / ลูกเล่นต่าง ๆ ในหน้า FAQs ซึ่งในช่วงนี้ลูกเล่นส่วนใหญ่เป็นการดาวโหลดน์ Dependencies มาใช้ / เเละดูเเล Responsive โดยรวม</p>
+				<a target="_blank" href="https://wip.camp/"><button class="button2">Visit Website</button></a>
+				<a target="_blank" href="https://github.com/wipcamp/12-frontend"><button class="button">GitHub
+						Repository</button></a>
+
+			</div>
+			<div class="worklist-member hvr-underline-from-left" id="dp">
+				<p>SIT Hello World 2020 PR Website ⭳</p>
+			</div>
+			<div class="worklist-info" id="dpinfo">
+				<div class="midline-title">HelloDolphin</div>
+				<div class="image-container" id="muimg">
+					<img src="img/dp1.JPG"><img src="img/dp2.JPG">
+				</div>
+				<p>คราวนี้ถึงครามเป็นหัวหน้าฝ่าย FrontEnd เเล้วนะครับ การทำงานใช้ stack เป็น ReactJs เหมือนเดิม ต่างกันคือใช้ Parcel เป็นตัว build นะครับ เเละเว็บนี้ ลูกเล่นต่าง ๆ ใช้ Dependencies น้องลงเเละเปลี่ยนเป็นรูปแบบเขียนเองมากขึ้น สำหรับการเรียนรู้ และสามารถปรับปรุงได้ตามที่เราต้องการ ผม ทำหน้าที่ส่วน Navbar / Hambergur / FAQs เเละ Responsive โดยรวม</p>
+				<a target="_blank" href="https://hellodolphin.in.th/"><button class="button2">Visit Website</button></a>
+				<a target="_blank" href="https://github.com/akira2542/hello-dolphin"><button class="button">GitHub
+						Repository</button></a>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$("#CPS").click(function () {
+			$("#saletrackinfo").slideToggle(500);
+		});
+		$("#mlq").click(function () {
+			$("#mlqinfo").slideToggle(500);
+		});
+		$("#rp").click(function () {
+			$("#rpinfo").slideToggle(500);
+		});
+		$("#wip").click(function () {
+			$("#wipinfo").slideToggle(500);
+		});
+		$("#dp").click(function () {
+			$("#dpinfo").slideToggle(500);
+		});
+	</script>
 </body>
+
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .ifra {
+      width: 100%;
+      height: 100vh;
+      background-color: cadetblue;
+    }
+
+    .ifra iframe {
+      width: 100%;
+      height: 100vh;       
+    }
+  </style>
+  <script>
+    function insertIframe() {
+      const url = prompt('insert URL');
+      console.log({ url })
+      if (!url) return;
+      const iframeEle = document.createElement("iframe");
+      iframeEle.setAttribute("src", url);
+      const ifraHome = document.getElementById("ifra-home");
+      console.log(iframeEle);
+      ifraHome.appendChild(iframeEle);
+    }
+
+    // window.addEventListener("load", () => {
+    //     const button = document.getElementById('create-iframe');
+    //     button.addEventListener(insertIframe)
+    // });
+
+    window.addEventListener("load", (event) => {
+      console.log("page is fully loaded");
+      const button = document.getElementById("create-iframe");
+      button.addEventListener("click", insertIframe);
+    });
+  </script>
+  <body>
+    <button id="create-iframe">CLICK TO ADD IFRAME</button>
+    <div class="ifra" id="ifra-home"></div>
+  </body>
+</html>
